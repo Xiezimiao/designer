@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="209715200" />
+	<package name="strutsBean" extends="struts-default" namespace="/">
+		<action name="UploadCase" class="cn.edu.zjut.action.DesignerAction"
+			method="upload">
+			<result name="uploadSucccess">/test1.jsp</result>
+			<result name="uploadFail">/test1.jsp</result>
+		</action>
+		<action name="ExampleDetails" class="cn.edu.zjut.action.DesignerAction"
+			method="viewExampleDetails">
+			<result name="viewSuccess">/exampleDetails.jsp</result>
+			<result name="viewFail">/exampleDetails.jsp</result>
+		</action>
+		<action name="showPanorama" class="cn.edu.zjut.action.PanoramaAction"
+			method="show">
+			<result name="showSuccess">/showPanorama.jsp</result>
+		</action>
+		<action name="login" class="cn.edu.zjut.action.LoginAction"
+			method="login">
+			<result name="success">/index.jsp</result>
+			<result name="fail">/login.jsp</result>
+		</action>
+		<action name="searchAllExample" class="cn.edu.zjut.action.SearchExampleAction"
+			method="searchAllExample">
+			<result name="success">/projects.jsp</result>
+			<result name="fail">/projects.jsp</result>
+		</action>
+		<action name="putExample" class="cn.edu.zjut.action.ExampleAction">
+			<result name="success">/exampleDetails.jsp</result>
+		</action>
+		<action name="findall" class="cn.edu.zjut.action.SearchExampleAction"
+			method="findall">
+			<result name="success">/projects.jsp</result>
+			<result name="fail">/projects.jsp</result>
+		</action>
+		<action name="Review" class="cn.edu.zjut.action.ExampleAction"
+			method="review">
+			<result name="viewSuccess">/exampleDetails.jsp</result>
+			<result name="viewFail">/exampleDetails.jsp</result>
+		</action>
+		<action name="putDesigner" class="cn.edu.zjut.action.DesignerAction">
+			<result name="others">/phpOthers.jsp</result>
+			<result name="myself">/php.jsp</result>
+		</action>
+		<action name="judge" class="cn.edu.zjut.action.DesignerAction"
+			method="judgeIdentity">
+			<result name="designer">/php.jsp</result>
+			<result name="employer">/employerPhp.jsp</result>
+		</action>
+
+		<action name="findneeds" class="cn.edu.zjut.action.NeedAction"
+			method="findneeds">
+			<result name="findneedssuccess">/needList.jsp</result>
+		</action>
+
+		<action name="needsByID" class="cn.edu.zjut.action.NeedAction"
+			method="getNeedsByID">
+			<result name="success">/needsDetail.jsp</result>
+		</action>
+
+		<action name="order" class="cn.edu.zjut.action.NeedsAction"
+			method="order">
+			<result name="success">/needs.jsp</result>
+			<result name="fail">/needs.jsp</result>
+		</action>
+	</package>
+</struts>

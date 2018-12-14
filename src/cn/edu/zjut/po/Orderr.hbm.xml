@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.zjut.po.Orderr" table="orderr" catalog="designer"
+		schema="dbo">
+		<id name="orderrId" type="string">
+			<column name="orderrID" length="40" />
+			<generator class="assigned" />
+		</id>
+		<property name="title" type="string">
+			<column name="title" length="20" />
+		</property>
+		<property name="beginTime" type="java.sql.Timestamp">
+			<column name="beginTime" />
+		</property>
+		<property name="finishTime" type="java.sql.Timestamp">
+			<column name="finishTime" />
+		</property>
+		<property name="money" type="java.lang.Float">
+			<column name="money" />
+		</property>
+		<property name="state" type="string">
+			<column name="state" length="5" />
+		</property>
+	</class>
+</hibernate-mapping>
